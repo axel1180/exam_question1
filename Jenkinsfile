@@ -24,7 +24,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    sh 'docker run -d -p 8080:80 --name test_container $IMAGE_NAME:latest'
+                    sh 'docker run -d -p 8880:80 --name test_container $IMAGE_NAME:latest'
                 }
             }
         }
