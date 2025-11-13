@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "myapp"
+        IMAGE_NAME = "myapppython"
         DOCKERHUB_USER = "your_dockerhub_username"
     }
 
@@ -24,7 +24,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    sh 'docker run -d -p 8880:80 --name test_container $IMAGE_NAME:latest'
+                    sh 'docker run --name my_test_container $IMAGE_NAME:latest'
                 }
             }
         }
